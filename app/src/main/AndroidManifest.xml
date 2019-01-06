@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.usser.moneycatch">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <!-- 의미없는 주석 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LodingActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".AddActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".FirstviewActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".MinusActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".Addrecycle" />
+        <activity android:name=".Minusrecycle" />
+        <activity android:name=".Plusactivity" />
+        <activity android:name=".main_input_recycle" />
+        <activity android:name=".calendarRecycle" />
+        <activity android:name=".Fix" />
+        <activity android:name=".Main_input_minus_recycle" />
+        <activity android:name=".Fix_minus" />
+        <activity android:name=".Calculator" />
+        <activity android:name=".Itemallview" />
+        <activity android:name=".Itemallveiw_add_recycle" />
+        <activity android:name=".Itemallveiw_minus_recycle" />
+        <activity android:name=".LoadingTwo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".SMSReceiver">
+            <intent-filter android:priority="10000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Statistic"></activity>
+    </application>
+
+</manifest>
